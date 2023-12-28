@@ -4,6 +4,7 @@ class Solution {
         for(int i = 0; i < numbers.length; i++) {
             answer += numbers[i];
         }
-        return answer/numbers.length;
+        answer /= numbers.length;
+        return answer;
     }
 }
