@@ -4,19 +4,18 @@ class Solution {
         int x = dot[0];
         int y = dot[1];
         
-        if(x > 0 && y > 0) {
-            answer = 1;
-        }
-        else if(x < 0 && y > 0) {
-            answer = 2;
-        }
-        else if(x < 0 && y < 0) {
-            answer = 3;
+        if(x > 0) {
+            if(y < 0) 
+                answer = 4;
+            else 
+                answer = 1;
         }
         else {
-            answer = 4;
+            if(y < 0) 
+                answer = 3;
+            else
+                answer = 2;
         }
-            
         return answer;
     }
 }
