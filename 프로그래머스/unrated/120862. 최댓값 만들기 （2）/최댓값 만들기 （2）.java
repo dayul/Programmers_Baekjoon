@@ -1,14 +1,14 @@
 class Solution {
     public int solution(int[] numbers) {
-        int answer = numbers[0] * numbers[1];
+        int answer = -10001;
         
-        for(int i : numbers) {
-            for(int j : numbers) {
+        for(int i = 0; i < numbers.length; i++) {
+            for(int j = i+1; j < numbers.length; j++) {
                 
-                if(i == j)  continue;
+                //if(i == j)  continue;
                 
-                if(answer < i * j) {
-                    answer = i * j;
+                if(answer < numbers[i] * numbers[j]) {
+                    answer = numbers[i] * numbers[j];
                 }
             }
         }
