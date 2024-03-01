@@ -1,12 +1,10 @@
 class Solution {
     public int solution(int n, int t) {
-        int answer = n;
-        int hour = 1;
         
-        for(int i = n; hour <= t; n *= 2) {
-            answer *= 2;
-            hour++;
+        for(int i = 0; i < t; i++) {
+            n *= 2;
         }
-        return answer;
+        
+        return n;
     }
 }
