@@ -1,7 +1,7 @@
 function solution(my_string) {
     var answer = [];
     
-    answer = my_string.split(" ").filter(a => { return a !== '' });
+    answer = my_string.split(" ").filter(a => a);
     
     
     return answer;
