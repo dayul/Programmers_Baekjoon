@@ -1,4 +1,4 @@
 function solution(arr) {
-    var answer = arr.reduce((a, b) => a + b);
+    var answer = arr.join("");
     return answer;
 }
