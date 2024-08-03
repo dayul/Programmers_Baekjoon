@@ -1,5 +1,9 @@
 function solution(n, m) {
-    var answer = [];
+    var answer = [0, 0];
+    
+    // 크기를 비교하고 값을 swap
+    if(n > m)
+        [n, m] = [m, n];
     
     for(let i = 1; i <= m; i++) {
         if(n % i === 0 && m % i === 0) 
