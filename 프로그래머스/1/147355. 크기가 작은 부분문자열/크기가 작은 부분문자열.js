@@ -5,9 +5,10 @@ function solution(t, p) {
     
     for(let i = 0; i < len; i++) {
         // 문자열에서 한칸씩 앞으로 가며 문자열을 슬라이싱함
-        let num = parseInt(t.substring(i, p.length + i));
+        // parseInt말고 +도 가능! (숫자로만 이루어진 문자열일때)
+        let num = +(t.substring(i, p.length + i));
         
-        if(num <= parseInt(p))
+        if(num <= +p)
             answer++;
     }
     
