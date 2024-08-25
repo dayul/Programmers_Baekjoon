@@ -1,2 +1,3 @@
--- 코드를 입력하세요
+-- COUNT() 함수
+-- AS
 SELECT COUNT(ANIMAL_ID) AS COUNT FROM ANIMAL_INS;
