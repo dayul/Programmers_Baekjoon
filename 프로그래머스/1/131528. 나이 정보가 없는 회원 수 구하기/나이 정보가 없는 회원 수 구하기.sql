@@ -1,0 +1,3 @@
+-- 코드를 입력하세요
+-- COUNT()는 자동으로 NULL값을 제외함
+SELECT COUNT(*) AS USERS FROM USER_INFO WHERE AGE IS NULL;
