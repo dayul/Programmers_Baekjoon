@@ -4,11 +4,8 @@ function solution(participant, completion) {
     
     // 참가자 이름별로 카운트하기 ({참가자 : count})
     for(p of participant) {
-        if(parti.has(p)) {
-            parti.set(p, parti.get(p) + 1);
-        }
-        else parti.set(p, 1);
-        // parti.set(p, (parti.get(p) || 0) + 1);
+        // if 생략 가능
+        parti.set(p, (parti.get(p) || 0) + 1);
     }
     
     // 완주자가 나올 때마다 카운트 - 1
