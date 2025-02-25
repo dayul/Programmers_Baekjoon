@@ -1,0 +1,4 @@
+-- CONCAT() : 문자열을 합치는 함수
+
+SELECT CONCAT(MAX(LENGTH), 'cm') AS MAX_LENGTH 
+FROM FISH_INFO;
