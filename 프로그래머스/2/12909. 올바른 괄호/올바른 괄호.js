@@ -1,21 +1,13 @@
 function solution(s){
-    var answer = false;
-    let count = 0;
+    const stack = [];
     
-    for(a of s.split("")) {
-        // ( 이 나왔을 때 ++
-        if(a === '(') count++;
-        
-        // ) 이 나왔을 때 --
-        else {
-            count--;
-            // -- 를 했을 때 count가 음수면 false 반환
-            if(count < 0) return false;
+    for(let n of s) {
+        if(n === '(') stack.push(")");
+        else if(n === ')') {
+            if(stack.length === 0) return false;
+            stack.pop();
         }
     }
     
-    // 최종적으로 괄호 순서가 맞고, 개수가 맞으면 true
-    if(count === 0) answer = true; 
-    
-    return answer;
+    return stack.length > 0 ? false : true;
 }
